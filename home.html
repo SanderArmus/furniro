@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="pictures/logo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="pictures/logo.svg" alt="Logo">Furniro</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="nav-buttons">
+                <button><img src="pictures/icon1.svg" alt="Icon 1"></button>
+                <button><img src="pictures/icon2.svg" alt="Icon 2"></button>
+                <button><img src="pictures/icon3.svg" alt="Icon 3"></button>
+                <button><img src="pictures/icon4.svg" alt="Icon 4"></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="column-1"></div>
+            <div class="column-2">
+                <p>New Arrival</p>
+                <h1>Discover Our New Collection</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                <button class="btn">BUY NOW</button>
+            </div>
+        </section>
+        <section id="section2">
+            <!-- Heading and small text -->
+            <div class="heading-container">
+                <h2>Browse The Range</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="columns-container">
+                <div class="column">
+                    <img src="pictures/image 100.png" alt="Image 1">
+                    <p>Living</p>
+                </div>
+                <div class="column">
+                    <img src="pictures/image 101.png" alt="Image 2">
+                    <p>Bedroom</p>
+                </div>
+                <div class="column">
+                    <img src="pictures/image 106.png" alt="Image 3">
+                    <p>Dining</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentLocation = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentLocation) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+</html>

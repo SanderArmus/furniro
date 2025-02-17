@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="pictures/logo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="pictures/logo.svg" alt="Logo">Furniro</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="nav-buttons">
+                <button><img src="pictures/icon1.svg" alt="Icon 1"></button>
+                <button><img src="pictures/icon2.svg" alt="Icon 2"></button>
+                <button><img src="pictures/icon3.svg" alt="Icon 3"></button>
+                <button><img src="pictures/icon4.svg" alt="Icon 4"></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to About Page</h1>
+    </main>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentLocation = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentLocation) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+</html>
